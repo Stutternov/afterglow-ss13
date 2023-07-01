@@ -151,7 +151,7 @@
 	display_name = "Futuristic Parts"
 	description = "The pinnacle of machine parts."
 	prereq_ids = list("adv_power", "high_efficiency")
-	design_ids = list("femto_mani", "triphasic_scanning", "quadratic_capacitor","bluespace_matter_bin")
+	design_ids = list("femto_mani", "triphasic_scanning", "quadratic_capacitor","bluespace_matter_bin", "servo_repair")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
 	export_price = 5000
 	skill_level_needed = HARD_CHECK

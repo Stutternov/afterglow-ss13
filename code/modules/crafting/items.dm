@@ -305,3 +305,121 @@ GLOBAL_LIST_INIT(blueprint_fluff, list(
 				/obj/item/advanced_crafting_components/flux,
 				/obj/item/blueprint/research)
 
+/obj/item/experimental
+	name = "servo repair kit"
+	desc = "These appear to be used for repairing powerarmor sets..."
+	icon = 'icons/obj/assemblies.dmi'
+	icon_state = "radio-multitool"
+
+/obj/item/experimental/attackby(obj/item/W, mob/user, params)
+	. = ..()
+	if(istype(W, /obj/item/gun/ballistic/shotgun))
+		to_chat(usr, "You can't improve [W.name]...")
+		return
+	if(istype(W, /obj/item/gun/ballistic))
+		to_chat(usr, "You can't improve [W.name]...")
+		return
+	if(istype(W, /obj/item/gun/energy))
+		to_chat(usr, "You can't improve [W.name]...")
+		return
+	if(istype(W, /obj/item/clothing/suit/armor/f13/power_armor))
+		parmor(W, user)
+		return
+	if(istype(W, /obj/item/clothing/head/helmet/f13/power_armor))
+		pahat(W, user)
+		return
+	if(istype(W, /obj/item/clothing/suit/armor))
+		to_chat(usr, "You can't improve [W.name]...")
+		return
+
+/obj/item
+	var/tinkered = 0
+	var/untinkerable = FALSE
+
+/obj/item/experimental/proc/reroll(obj/item/W, mob/user)
+	var/obj/item/item = W.type
+	qdel(W)
+	if(prob(70))
+		new item(user.loc)
+		return
+	to_chat(user,"You destroy the item in the process.")
+
+/obj/item/experimental/proc/parmor(obj/item/W, mob/user)
+	var/obj/item/clothing/suit/armor/f13/power_armor/A = W
+	//chance to upgrade all t45b versions to salvaged t45b, chance to upgrade salvaged t45b to t45b (new sprotes, t8 armor with no slowdown)
+	if(prob(40))
+		if(istype(A,/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b))//ups all salvaged PA to wokring PA
+			new /obj/item/clothing/suit/armor/power_armor/t45d(user.loc)
+			qdel(A)
+			return
+		if(istype(A,/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d))//same as above; different path of salvaged
+			new /obj/item/clothing/suit/armor/power_armor/t45d(user.loc)
+			qdel(A)
+			return
+		if(istype(A,/obj/item/clothing/suit/armor/heavy/salvaged_pa/t51b))//ups t-51 to proper functioning PA
+			new /obj/item/clothing/suit/armor/power_armor/t51b(user.loc)
+			qdel(A)
+			return
+	qdel(src)
+
+/obj/item/experimental/proc/pahat(obj/item/W, mob/user)
+	var/obj/item/clothing/head/helmet/f13/power_armor/H = W
+	if(prob(50))
+		if(istype(H,/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b))
+			new /obj/item/clothing/head/helmet/f13/power_armor/t45d(user.loc)
+			qdel(H)
+			return
+		if(istype(H,/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d))
+			new /obj/item/clothing/head/helmet/f13/power_armor/t45d(user.loc)
+			qdel(H)
+			return
+		if(istype(H, /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t51b))
+			new /obj/item/clothing/head/helmet/f13/power_armor/t51b(user.loc)
+			qdel(H)
+			return
+	qdel(src)
+
+//Not implimenting this rn. Maybe if we want to in the future; don't think we need to since salvaging is in a fine slot as is.
+/*
+/obj/item/invention
+	name = "invention"
+	desc = "What could this be..."
+	icon = 'icons/obj/assemblies.dmi'
+	icon_state = "radio-multitool"
+
+/obj/item/invention/attack_self(mob/user)
+	. = ..()
+	makething(user)
+
+/obj/item/invention/proc/makething(mob/user)
+	qdel(src)
+
+	var/obj/item/item
+
+	var/list/vhigh = list(/obj/item/melee/powerfist, /obj/item/nullrod/claymore/chainsaw_sword, /obj/item/twohanded/thermic_lance)
+
+	var/list/high = list(/obj/item/shishkebabpack, /obj/item/gun/energy/gammagun, /obj/item/clothing/suit/armor/f13/sulphitearmor,
+	/obj/item/clothing/head/helmet/f13/sulphitehelm, /obj/item/melee/powerfist/moleminer, /obj/item/circuitboard/machine/chem_master,
+	/obj/item/circuitboard/machine/cell_charger)
+
+	var/list/mid = list(/obj/item/twohanded/fireaxe/bmprsword, /obj/item/twohanded/sledgehammer, /obj/item/shield/makeshift,/obj/item/gun/ballistic/automatic/autopipe,
+	/obj/item/grenade/homemade/dynamite, /obj/item/clothing/suit/armor/f13/metalarmor, /obj/item/gun/ballistic/rifle/enfield, /obj/item/gun/ballistic/rifle/mag/varmint,
+	/obj/item/clothing/head/helmet/f13/raider/eyebot, /obj/item/clothing/head/helmet/knight/f13/metal/reinforced)
+
+	var/list/low = list(/obj/item/gun/ballistic/revolver/pipe_rifle,/obj/item/fishingrod,/obj/item/grenade/homemade/firebomb,
+	/obj/item/clothing/suit/armor/f13/slam, /obj/item/clothing/suit/armor/f13/raider/raidermetal,/obj/item/clothing/head/helmet/f13/raidermetal,
+	/obj/item/clothing/head/helmet/knight/f13/metal)
+
+	if(prob(60))
+		item = pick(low)
+		new item(user.loc)
+	if(prob(30))
+		item = pick(mid)
+		new item(user.loc)
+	if(prob(9))
+		item = pick(high)
+		new item(user.loc)
+	if(prob(1))
+		item = pick(vhigh)
+		new item(user.loc)
+*/

@@ -807,3 +807,17 @@
 	build_path = /obj/item/shuttle_route_optimisation/void
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
+
+//////////////////////
+// Servo Repair Kit //
+//////////////////////
+
+/datum/design/servo_repair
+	name = "Power Armor Servo Repair Kit"
+	desc = "A kit of loose items capable of retuning and repairing a power armor's servos to working order. This includes a few replacement parts, duct tape, and a dream!"
+	id = "servo_repair"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 4000, /datum/material/glass = 1000, /datum/material/titanium = 6000, /datum/material/diamond = 1000)
+	build_path = /obj/item/shuttle_route_optimisation/void
+	category = list("Equipment")
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
