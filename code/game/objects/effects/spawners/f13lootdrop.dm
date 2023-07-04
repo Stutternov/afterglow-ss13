@@ -766,16 +766,14 @@
 	name = "mid tier energy gun"
 	loot = list(/obj/effect/spawner/bundle/f13/aer9 = 40,
 				/obj/effect/spawner/bundle/f13/wattz2k = 30,
-				/obj/effect/spawner/bundle/f13/plasmapistol = 25,
-				/obj/effect/spawner/bundle/f13/ionrifle = 5
+				/obj/effect/spawner/bundle/f13/plasmapistol = 25
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/midhigh //overlaps with midtier
 	name = "mid-high tier energy gun"
 	loot = list(/obj/item/gun/energy/laser/aer12 = 20,
 				/obj/effect/spawner/bundle/f13/plasmapistol = 25,
-				/obj/effect/spawner/bundle/f13/wattz2k = 15,
-				/obj/effect/spawner/bundle/f13/ionrifle = 25
+				/obj/effect/spawner/bundle/f13/wattz2k = 15
 				)
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/high
 	name = "high tier energy gun"
@@ -802,7 +800,8 @@
 				/obj/item/gun/energy/laser/plasma/pistol/eve,
 				/obj/item/gun/energy/laser/wattz2ks,
 				/obj/effect/spawner/bundle/f13/aer14,
-				/obj/item/gun/energy/laser/plasma/pistol/adam
+				/obj/item/gun/energy/laser/plasma/pistol/adam,
+				/obj/effect/spawner/bundle/f13/ionrifle
 				)
 
 //Ballistic Weapon Spawners
@@ -2135,7 +2134,6 @@ obj/effect/spawner/bundle/f13/combat_rifle
 		/obj/item/book/granter/crafting_recipe/blueprint/smg10mm,
 		/obj/item/book/granter/crafting_recipe/blueprint/aep7,
 		/obj/item/book/granter/crafting_recipe/blueprint/scoutcarbine,
-		/obj/item/book/granter/crafting_recipe/blueprint/sniper
 	)
 
 
@@ -2171,10 +2169,10 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	lootcount = 1
 	loot = list(
 		/obj/item/book/granter/crafting_recipe/blueprint/gauss,
-		/obj/item/book/granter/crafting_recipe/blueprint/am_rifle,
+		/obj/item/book/granter/crafting_recipe/blueprint/sniper,
 		/obj/item/book/granter/crafting_recipe/blueprint/citykiller,
 		/obj/item/book/granter/crafting_recipe/blueprint/rangemaster,
-		/obj/item/book/granter/crafting_recipe/blueprint/bozar
+		/obj/item/book/granter/crafting_recipe/blueprint/lsw
 	)
 
 /obj/effect/spawner/lootdrop/f13/blueprintVHighPartsWeighted
