@@ -46,6 +46,8 @@
 	armor_tier_desc = ARMOR_CLOTHING_PA
 	stiffness = MEDIUM_STIFFNESS
 	custom_price = PRICE_ALMOST_ONE_GRAND
+	strip_delay = 50
+
 
 /obj/item/clothing/suit/armor/power_armor/Initialize()
 	. = ..()
