@@ -20,6 +20,7 @@
 	damage_falloff = BULLET_FALLOFF_START_SHOTGUN_PELLET
 
 	zone_accuracy_type = ZONE_WEIGHT_SHOTGUN
+	var/low_velocity = 1
 
 /* rubber pellet
  * DAMAGE: 1
@@ -45,6 +46,7 @@
 	zone_accuracy_type = ZONE_WEIGHT_SHOTGUN
 	sharpness = SHARP_NONE
 	embedding = null
+	var/low_velocity = 1
 
 /* handload pellet
  * DAMAGE: 8
@@ -67,6 +69,7 @@
 	damage_falloff = BULLET_FALLOFF_START_SHOTGUN_PELLET
 
 	zone_accuracy_type = ZONE_WEIGHT_SHOTGUN
+	var/low_velocity = 1
 
 /obj/item/projectile/bullet/pellet/shotgun_improvised/Initialize()
 	. = ..()
@@ -151,6 +154,7 @@
 	damage_falloff = BULLET_FALLOFF_START_SHOTGUN_PELLET
 
 	zone_accuracy_type = ZONE_WEIGHT_PRECISION
+	var/low_velocity = 1
 
 /* train
  * DAMAGE: 20
@@ -175,6 +179,7 @@
 
 	zone_accuracy_type = ZONE_WEIGHT_SEMI_AUTO
 	sharpness = SHARP_NONE //crunch
+	var/low_velocity = 1
 
 /obj/item/projectile/bullet/pellet/trainshot/on_hit(atom/target)
 	. = ..()
@@ -230,6 +235,7 @@
 
 	sharpness = SHARP_NONE
 	zone_accuracy_type = ZONE_WEIGHT_SHOTGUN
+	var/low_velocity = 1
 
 /* 12g pellet fire
  * DAMAGE: 5
@@ -390,6 +396,7 @@
 	light_range = 1.5
 	light_power = 0.3
 	light_color = "#FF7F01"
+	var/low_velocity = 1
 
 /obj/item/projectile/bullet/seed
 	damage = 6
@@ -399,6 +406,7 @@
 	name = "incapacitating pellet"
 	damage = 1
 	stamina = 6
+	var/low_velocity = 1
 
 /obj/item/projectile/bullet/pellet/magnum_buckshot
 	name = "magnum buckshot pellet"
@@ -406,6 +414,7 @@
 	armour_penetration = 0.15
 	wound_bonus = 10
 	bare_wound_bonus = 10
+	var/low_velocity = 1
 
 // BETA STUFF // Obsolete
 /obj/item/projectile/bullet/pellet/shotgun_buckshot/test

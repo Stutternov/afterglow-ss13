@@ -29,6 +29,7 @@
 	
 	pixels_per_second = BULLET_SPEED_PISTOL_22
 	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	var/low_velocity = 1			// This controls if a round is deflected off Power Armor or not. This should ONLY be put onto low-caliber weapons and low-velocity calibers.
 
 /* .22 rubber
  * DAMAGE: 1.5
@@ -113,6 +114,7 @@
 	
 	pixels_per_second = BULLET_SPEED_PISTOL_9MM
 	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	var/low_velocity = 1
 
 /* 9mm handload
  * DAMAGE: 15
@@ -342,6 +344,7 @@
 	
 	pixels_per_second = BULLET_SPEED_PISTOL_10MM
 	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	var/low_velocity = 1
 
 /* 10mm handload
  * DAMAGE: 22
@@ -474,6 +477,7 @@
 	
 	pixels_per_second = BULLET_SPEED_PISTOL_45ACP
 	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	var/low_velocity = 1
 
 /* 45 handload
  * DAMAGE: less
@@ -604,6 +608,7 @@
 	
 	pixels_per_second = BULLET_SPEED_PISTOL_38_MATCH
 	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	var/low_velocity = 1
 
 /* 357 handload
  * DAMAGE: 36

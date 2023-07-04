@@ -52,6 +52,7 @@
 
 	pixels_per_second = BULLET_SPEED_RIFLE_223
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
+	var/low_velocity = 1
 
 /* 5.56 handload
  * DAMAGE: 22
@@ -73,6 +74,7 @@
 
 	pixels_per_second = BULLET_SPEED_RIFLE_223_HANDLOAD
 	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	var/low_velocity = 1
 
 /* 5.56 rubber
  * DAMAGE: 2.5
@@ -97,6 +99,7 @@
 
 	sharpness = SHARP_NONE
 	zone_accuracy_type = ZONE_WEIGHT_PRECISION // Rubbers go where you want
+	var/low_velocity = 1
 
 /* 5.56 embed
  * DAMAGE: 12.5
@@ -118,6 +121,7 @@
 
 	pixels_per_second = BULLET_SPEED_RIFLE_223
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
+	var/low_velocity = 1
 
 	embed_falloff_tile = BULLET_WOUND_FALLOFF_RIFLE_LIGHT
 	embedding = list(
@@ -392,6 +396,7 @@
 
 	pixels_per_second = BULLET_SPEED_RIFLE_5MM
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
+	var/low_velocity = 1
 
 /* 5mm fmj
  * DAMAGE: more
@@ -498,6 +503,7 @@
 
 	pixels_per_second = BULLET_SPEED_RIFLE_5MM
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
+	var/low_velocity = 1
 
 
 ////////////////////
