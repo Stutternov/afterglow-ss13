@@ -318,7 +318,7 @@
 //Deflect_damage is set above in the base power armor path. You can set the damage deflection threshold indepdendetly if you want higher or lower deflection damages. Helmets also have their own.
 /obj/item/clothing/suit/armor/power_armor/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, low_velocity, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
 	if((attack_type == ATTACK_TYPE_PROJECTILE) && (def_zone in protected_zones))
-		if(prob(50) && (low_velocity = 1)) // Low velocity is a variable set on each individual bullet type/caliber. If you want, say, 9mm to not have a chance to deflect anymore, then remove the low_velocity = TRUE tag.
+		if(prob(50) && low_velocity == TRUE) // Low velocity is a variable set on each individual bullet type/caliber. If you want, say, 9mm to not have a chance to deflect anymore, then remove the low_velocity = TRUE tag.
 			block_return[BLOCK_RETURN_REDIRECT_METHOD] = REDIRECT_METHOD_DEFLECT
 			return BLOCK_SHOULD_REDIRECT | BLOCK_REDIRECTED | BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
 	return ..()

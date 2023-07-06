@@ -180,7 +180,7 @@
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, low_velocity, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
 	if((attack_type == ATTACK_TYPE_PROJECTILE) && (def_zone in protected_zones))
-		if(prob(25) && (low_velocity = 1)) // Low velocity is a variable set on each individual bullet type/caliber. If you want, say, 9mm to not have a chance to deflect anymore, then remove the low_velocity = TRUE tag.
+		if(prob(25) && low_velocity == TRUE) // Low velocity is a variable set on each individual bullet type/caliber. If you want, say, 9mm to not have a chance to deflect anymore, then remove the low_velocity = TRUE tag.
 			block_return[BLOCK_RETURN_REDIRECT_METHOD] = REDIRECT_METHOD_DEFLECT
 			return BLOCK_SHOULD_REDIRECT | BLOCK_REDIRECTED | BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
 	return ..()
@@ -253,7 +253,7 @@
 
 /////////
 // NCR //
-///////// 
+/////////
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/ncr
 	name = "salvaged NCR power armor"
@@ -293,7 +293,7 @@
 	item_state = "legion_palacent"
 	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T1 *ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2)
-	
+
 /obj/item/clothing/suit/armor/heavy/legion/legate
 	name = "legion legate armor"
 	desc = "Made by the most skilled blacksmiths in Arizona, the bronzed steel of this rare armor offers good protection, and the scars on its metal proves it has seen use on the field."

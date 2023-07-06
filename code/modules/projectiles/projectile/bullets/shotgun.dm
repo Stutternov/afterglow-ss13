@@ -15,12 +15,12 @@
 	wound_bonus = BULLET_WOUND_SHOTGUN_PELLET
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_PELLET_NAKED_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-	
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_PELLET
 	damage_falloff = BULLET_FALLOFF_START_SHOTGUN_PELLET
 
 	zone_accuracy_type = ZONE_WEIGHT_SHOTGUN
-	var/low_velocity = 1
+	low_velocity = TRUE
 
 /* rubber pellet
  * DAMAGE: 1
@@ -39,14 +39,14 @@
 	wound_bonus = RUBBERY_WOUND_SHOTGUN_PELLET
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_PELLET_NAKED_MULT
 	wound_falloff_tile = BULLET_FALLOFF_START_SHOTGUN_PELLET
-	
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_PELLET
 	damage_falloff = BULLET_FALLOFF_START_SHOTGUN_PELLET
-	
+
 	zone_accuracy_type = ZONE_WEIGHT_SHOTGUN
 	sharpness = SHARP_NONE
 	embedding = null
-	var/low_velocity = 1
+	low_velocity = TRUE
 
 /* handload pellet
  * DAMAGE: 8
@@ -64,12 +64,12 @@
 	wound_bonus = BULLET_WOUND_SHOTGUN_PELLET
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_PELLET_NAKED_MULT
 	wound_falloff_tile = BULLET_FALLOFF_START_SHOTGUN_PELLET
-	
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_PELLET
 	damage_falloff = BULLET_FALLOFF_START_SHOTGUN_PELLET
 
 	zone_accuracy_type = ZONE_WEIGHT_SHOTGUN
-	var/low_velocity = 1
+	low_velocity = TRUE
 
 /obj/item/projectile/bullet/pellet/shotgun_improvised/Initialize()
 	. = ..()
@@ -102,7 +102,7 @@
 	wound_bonus = BULLET_WOUND_SHOTGUN_SLUG
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_SLUG_NAKED_MULT
 	wound_falloff_tile = BULLET_FALLOFF_START_SHOTGUN_PELLET
-	
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG
 	damage_falloff = BULLET_FALLOFF_START_SHOTGUN_PELLET
 
@@ -149,12 +149,12 @@
 	wound_bonus = RUBBERY_WOUND_SHOTGUN_SLUG
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_SLUG_NAKED_MULT
 	wound_falloff_tile = BULLET_FALLOFF_START_SHOTGUN_PELLET
-	
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG
 	damage_falloff = BULLET_FALLOFF_START_SHOTGUN_PELLET
 
 	zone_accuracy_type = ZONE_WEIGHT_PRECISION
-	var/low_velocity = 1
+	low_velocity = TRUE
 
 /* train
  * DAMAGE: 20
@@ -173,13 +173,13 @@
 	wound_bonus = BULLET_WOUND_SHOTGUN_TRAIN
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_TRAIN_NAKED_MULT
 	wound_falloff_tile = BULLET_FALLOFF_START_SHOTGUN_PELLET
-	
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_TRAIN
 	damage_falloff = BULLET_FALLOFF_START_SHOTGUN_PELLET
 
 	zone_accuracy_type = ZONE_WEIGHT_SEMI_AUTO
 	sharpness = SHARP_NONE //crunch
-	var/low_velocity = 1
+	low_velocity = TRUE
 
 /obj/item/projectile/bullet/pellet/trainshot/on_hit(atom/target)
 	. = ..()
@@ -205,7 +205,7 @@
 	wound_bonus = BULLET_WOUND_SHOTGUN_SLUG * BULLET_WOUND_FIRE
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_SLUG_NAKED_MULT * BULLET_NAKED_WOUND_FIRE
 	wound_falloff_tile = BULLET_FALLOFF_START_SHOTGUN_PELLET
-	
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG
 	damage_falloff = BULLET_FALLOFF_START_SHOTGUN_PELLET
 
@@ -229,13 +229,13 @@
 	wound_bonus = BULLET_WOUND_SHOTGUN_PELLET * BULLET_WOUND_FIRE
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_PELLET_NAKED_MULT * BULLET_NAKED_WOUND_FIRE
 	wound_falloff_tile = BULLET_FALLOFF_START_SHOTGUN_PELLET
-	
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_PELLET
 	damage_falloff = BULLET_FALLOFF_START_SHOTGUN_PELLET
 
 	sharpness = SHARP_NONE
 	zone_accuracy_type = ZONE_WEIGHT_SHOTGUN
-	var/low_velocity = 1
+	low_velocity = TRUE
 
 /* 12g pellet fire
  * DAMAGE: 5
@@ -259,7 +259,7 @@
 	wound_bonus = BULLET_WOUND_SHOTGUN_PELLET * BULLET_WOUND_FIRE
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_PELLET_NAKED_MULT * BULLET_NAKED_WOUND_FIRE
 	wound_falloff_tile = BULLET_FALLOFF_START_SHOTGUN_PELLET
-	
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_PELLET
 	damage_falloff = BULLET_FALLOFF_START_SHOTGUN_PELLET
 
@@ -290,7 +290,7 @@
 	wound_bonus = RUBBERY_WOUND_SHOTGUN_SLUG
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_SLUG_NAKED_MULT
 	wound_falloff_tile = BULLET_FALLOFF_START_SHOTGUN_SLUG
-	
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG
 	damage_falloff = BULLET_FALLOFF_START_SHOTGUN_SLUG
 
@@ -337,7 +337,7 @@
 	wound_bonus = BULLET_WOUND_SHOTGUN_SLUG
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_SLUG_NAKED_MULT
 	wound_falloff_tile = BULLET_FALLOFF_START_SHOTGUN_SLUG
-	
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG
 	damage_falloff = BULLET_FALLOFF_START_SHOTGUN_SLUG
 
@@ -375,7 +375,7 @@
 	wound_bonus = BULLET_WOUND_SHOTGUN_SLUG * BULLET_WOUND_EXPLOSIVE
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_SLUG_NAKED_MULT * BULLET_NAKED_WOUND_EXPLOSIVE
 	wound_falloff_tile = BULLET_FALLOFF_START_SHOTGUN_SLUG
-	
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG
 	damage_falloff = BULLET_FALLOFF_START_SHOTGUN_SLUG
 
@@ -396,7 +396,7 @@
 	light_range = 1.5
 	light_power = 0.3
 	light_color = "#FF7F01"
-	var/low_velocity = 1
+	low_velocity = TRUE
 
 /obj/item/projectile/bullet/seed
 	damage = 6
@@ -406,7 +406,7 @@
 	name = "incapacitating pellet"
 	damage = 1
 	stamina = 6
-	var/low_velocity = 1
+	low_velocity = TRUE
 
 /obj/item/projectile/bullet/pellet/magnum_buckshot
 	name = "magnum buckshot pellet"
@@ -414,7 +414,7 @@
 	armour_penetration = 0.15
 	wound_bonus = 10
 	bare_wound_bonus = 10
-	var/low_velocity = 1
+	low_velocity = TRUE
 
 // BETA STUFF // Obsolete
 /obj/item/projectile/bullet/pellet/shotgun_buckshot/test
