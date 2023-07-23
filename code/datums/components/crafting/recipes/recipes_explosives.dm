@@ -280,7 +280,7 @@
 	always_available = FALSE
 	skill_needed = SKILL_REPAIR
 	skill_level = REGULAR_CHECK
-
+/*
 /datum/crafting_recipe/radgrenade
 	name = "Radiation Grenade"
 	result = /obj/item/grenade/f13/radiation
@@ -300,7 +300,7 @@
 	always_available = FALSE
 	skill_needed = SKILL_REPAIR
 	skill_level = REGULAR_CHECK
-
+*/
 /datum/crafting_recipe/flashbang
 	name = "Flashbang"
 	result = /obj/item/grenade/flashbang
